@@ -1,5 +1,22 @@
 # EmployeRegistration
 
+
+## To run the project
+Make sure Node is installed ( v10.19.0 ) & ( npm = 6.13.4 )
+Run `npm install`
+Run `ng serve`
+
+open below url in browser
+=========================
+http://localhost:4200/
+
+Login with following credential
+================================
+UserName: user
+Password: password
+
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.2.
 
 ## Development server
