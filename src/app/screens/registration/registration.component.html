@@ -1,0 +1,51 @@
+ <h2>Registration Form</h2>
+  <div class="container">
+  <form [formGroup]="registrationForm">
+
+    <div class="form-group">
+      <label> First Name:</label>
+      <input type="text" class="form-control" formControlName="firstName">
+      <span class="text-danger" *ngIf="(registrationForm.controls.firstName.touched && registrationForm.controls.firstName.invalid)">FirstName is required</span>
+    </div>
+
+    <div class="form-group">
+      <label> Last Name:</label>
+      <input type="text" class="form-control" formControlName="lastName">
+      <span class="text-danger" *ngIf="(registrationForm.controls.lastName.touched && registrationForm.controls.lastName.invalid)">LastName is required</span>
+    </div>
+
+    <div class="form-group">
+      <label> Gender:
+    <div class="form-check-inline">
+      <label >
+        <input type="radio" class="form-check-input" value="male" formControlName="gender">Male
+      </label>
+    </div>
+    <div class="form-check-inline">
+      <label >
+        <input type="radio" class="form-check-input" value="female" formControlName="gender">Female
+      </label>
+    </div>
+      </label>
+    </div>
+    <div class="form-group">
+      <label> DOB:</label>
+      <input type="text" class="form-control" formControlName="dob" placeholder="yyyy-mm-dd">
+      <span class="text-danger" *ngIf="(registrationForm.controls.dob.touched && registrationForm.controls.dob.invalid)">Date of birth is required</span>
+    </div>
+
+
+    <div class="form-group">
+      <label> Department:</label>
+      <input type="text" class="form-control" formControlName="department">
+      <span class="text-danger" *ngIf="(registrationForm.controls.department.touched && registrationForm.controls.department.invalid)">Department is required</span>
+    </div>
+    <div>
+
+    <button type="submit" class="btn btn-primary" [disabled]="!registrationForm.valid" (click)="registerData()">Submit</button>
+    </div>
+    <span class="text-success" *ngIf="(response)">Employee registration of {{ response.firstName}} is success</span>
+    <span class="text-danger" *ngIf="(error)"> {{ error}}</span>
+  </form>
+</div>
+
